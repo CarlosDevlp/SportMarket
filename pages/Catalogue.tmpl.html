@@ -1,0 +1,52 @@
+<!--section-->
+<section>
+	<!--catálogo-->
+	<div layout="row"
+		 layout-align="center center"
+		 layout-wrap
+		 layout-margin 
+	>
+
+		<!--banner-->
+		<div class="md-whiteframe-z3" flex="80" style="height:200px"></div>
+		
+		<!--categories-->
+		<div class="md-whiteframe-z3" flex="20" style="height:800px" >
+			 
+		</div>
+		<!--tags and content-->
+		<div class="md-whiteframe-z3" flex="60" style="height:800px" >
+				<md-chips
+				        ng-model="Catalogue.tags"
+				        readonly="false"
+				        placeholder="Enter a tag"
+				        delete-button-label="Remove Tag"
+				        delete-hint="Press delete to remove tag"
+				        secondary-placeholder="+Tag">
+				</md-chips>
+				<!--polos-->
+				<div 
+					layout-align="space-between start"
+					layout-wrap
+		 			layout-margin 
+		 			layout="row">
+		 			<!--polos-->
+		 			<div>
+						<div class="md-whiteframe-z3 polo" ng-click="">			 
+						</div>
+					</div>
+					<!--botones-->
+		 			<div class="up-down"
+		 			     layout-margin 
+		 				>
+
+			 			<md-button class="md-fab md-mini">a</md-button>
+			 			<md-button class="md-fab md-mini">b</md-button>
+
+		 			</div>
+				</div>
+		</div>	
+	</div>
+	<!---->
+
+</section>

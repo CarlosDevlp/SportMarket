@@ -1,0 +1,48 @@
+<md-dialog aria-label="browser" ng-controller="Browser as b">
+  <form>
+  <md-toolbar>
+    <div class="md-toolbar-tools">
+        <div  class="Title">Encuentra tu predio y conoce todo sobre él</div>
+    </div>
+  </md-toolbar>
+
+  <!--Contenido-->    
+      <md-dialog-content style="overflow-x:hidden">    
+
+            <!--Tipo de vía-->  
+              <md-select ng-model="combo.selected" placeholder="{{combo.selected}}" class="comboBox whole">
+                 <md-option ng-repeat="cmb in combo.options" value="{{cmb}}">{{cmb}}</md-option>             
+              </md-select>
+
+            <!--Nombre de vía-->
+              <md-input-container md-no-float class="textBox whole">
+                  <input required name="nombre" ng-model="nombre" placeholder="Nombre de vía" class="whole">
+                  <div ng-messages="nombre.$error">
+                      <div ng-message="required">Campo Obligatorio</div>
+                  </div>
+              </md-input-container>
+              <br/>
+              
+           <!--Número-->   
+              <md-input-container md-no-float class="textBox half">
+                  <input ng-model="numero" placeholder="Número" class="left half">
+              </md-input-container>              
+          <!--Interior-->              
+              <md-input-container md-no-float class="textBox half right">
+                  <input ng-model="interior" placeholder="Interior" class="right half">
+              </md-input-container>              
+            
+      </md-dialog-content>
+
+      
+  <!--Botón de Buscar-->
+  <div class="md-actions" layout="row">   
+    <span flex></span>
+    <md-button ng-click="search(true);" class="md-primary">
+     Buscar
+    </md-button>    
+  </div>
+
+
+  </form>
+</md-dialog>

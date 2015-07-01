@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="SportMarket">
+  <head>
+    <title>SportMarket</title>
+    <!--<link rel="prefetch" href="/assets/loading.gif"> preloader-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <!--css-->
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
+    <link rel="stylesheet" href="assets/app.css"/>
+   
+
+  </head>
+
+  <body  layout="row" ng-controller="MiraPlace as mp" id="mp">
+
+  <!--SECTION-->
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2 main">
+
+          <!--Header-->
+          <header>
+            <center>
+                <md-subheader class="md-primary">
+                    <h1 class="title">{{title}}</h1>
+                </md-subheader>
+            </center>
+          </header>
+          <!--menu nav-->
+                
+           <md-tabs  
+                 md-dynamic-height
+                 md-border-bottom 
+                 layout-align="center center"
+                 style="overflow-y:scroll"
+            >
+                    
+                  <md-tab  ng-repeat="m in menu" label="{{m.label}}" >
+                        <md-content class="md-padding"  >
+                            
+                            <div ng-include="m.link" ></div>              
+                        </md-content>
+                      </md-tab>
+                    
+          </md-tabs>
+
+          <!--ventana de chat-->
+           <div 
+                layout="column"
+                layout-align="start center"
+                class="md-whiteframe-z3 chat"
+
+                >
+                <div> 
+                    <div class="title" style="z-index:20">Chat</div>
+                    <!--caja de mensajes enviados-->                    
+                        <textarea class="messages">
+                            {{chat.messages}}
+                        </textarea>
+                    
+                
+
+
+                    <!--caja para escribir mensaje-->
+                    <div 
+                        layout="row"                    
+                    >
+                          
+                          <input ng-model="chat.message" value="{{chat.message}}" />
+
+                          <md-button class="md-raised" ng-click="chat.send()">
+                              SEND
+                          </md-button>
+                    </div>
+                </div>
+
+           </div>
+                          
+          <!--footer
+          <footer class="md-whiteframe-z3"
+                  layout="row"
+                  layout-align="space-around center ">
+
+                <div>
+                  tarjetas
+                </div>
+                footer menu nav
+                <div  ng-repeat="m in menu">
+                  <span>{{m.label}}</span>
+                </div>
+          </footer>-->
+  </div>            
+
+  <!--SCRIPT-->
+    
+    <script src="./src/users/model/Model.js"></script>
+    <script src="./bower_components/angular/angular.js"></script>
+    <script src="./bower_components/angular-animate/angular-animate.js"></script>
+    <script src="./bower_components/angular-aria/angular-aria.js"></script>
+    <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
+
+    <script src="./src/users/Users.js"></script>
+    <script src="./src/users/UserController.js"></script>
+    <script src="./src/users/UserService.js"></script>
+
+    <script type="text/javascript">        
+          angular
+              .module('SportMarket', ['ngMaterial', 'users'])
+              .config(function($mdThemingProvider, $mdIconProvider){
+                 
+
+                      $mdThemingProvider.theme('default')
+                          .primaryPalette('blue')
+                          .accentPalette('red');
+
+              });
+
+    </script>
+ 
+  </body>
+</html>
+
+<!--
+  <md-toolbar layout="row" class="md-whiteframe-z1"
+              layout-align="center center">
+                <md-button  aria-label="Settings"  ng-repeat="m in menu">
+                  {{m}}
+                </md-button>
+            </md-toolbar>
+-->

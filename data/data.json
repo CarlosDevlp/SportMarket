@@ -1,0 +1,86 @@
+[
+{
+"id":"1",
+"Direccion"       :   "Avenida ABc Miraflores",
+"lat"     :    "-12.121691",
+"lng"     :    "-77.029192",
+"Pisos"           :   "2/10",
+"Giro"            :   "Casa",
+"Deudas"          :    "NO",
+"Sanciones "      :    "SI,",
+"Entorno "        :     "",
+"Estacionamiento" :     "SI",
+"Historia"        :     "SI"
+
+},
+
+
+{
+"id":"2",
+
+"Direccion"       :   "Avenida def Miraflores",
+"lat"     :    "-12.121690",
+"lng"     :    "-77.029190",
+"Pisos"           :   "4/5",
+"Giro"            :   "Oficina",
+"Deudas"          :   "SI",
+"Sanciones "      :"SI",
+"Entorno "        :"",
+"Estacionamiento" :"SI",
+"Historia"        :"SI"
+
+},
+
+
+
+{
+"id":"3",
+
+"Direccion"       :   "Avenida XYZ Miraflores",
+"lat"     :    "-12.121680",
+"lng"     :    "-77.029170",
+"Pisos"           :   "6/8",
+"Giro"            :   "Oficina",
+"Deudas"          :   "SI",
+"Sanciones "      :"SI",
+"Entorno "        :"",
+"Estacionamiento" :"SI",
+"Historia"        :"SI"
+
+},
+
+
+{
+"id":"4",
+"Direccion"       :   "Calle La Paz Miraflores",
+"lat"     :    "-12.121670",
+"lng"     :    "-77.029192",
+"Pisos"           :   "8/10",
+"Giro"            :   "Casa",
+"Deudas"          :   "SI",
+"Sanciones "      :"SI",
+"Entorno "        :"",
+"Estacionamiento" :"SI",
+"Historia"        :"SI"
+
+},
+
+
+
+{
+"id":"5",
+"Direccion"       :   "Avenida 369 Miraflores",
+"lat"     :    "-12.121691",
+"lng"     :    "-77.029170",
+"Pisos"           :   "10/10",
+"Giro"            :   "Oficina",
+"Deudas"          :   "SI",
+"Sanciones "      :"SI",
+"Entorno "        :"",
+"Estacionamiento" :"SI",
+"Historia"        :"SI"
+
+}
+
+
+]

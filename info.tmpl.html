@@ -1,0 +1,36 @@
+<md-bottom-sheet class="md-grid info" ng-controller="Info as I">
+	<br/>
+		<center><b>Datos del predio: </b></center>
+		
+	<br/>
+	<div class="md-grid-text">
+		<b>Zonificación: </b>
+		{{ Property.Direccion }}
+	</div>
+	<div class="md-grid-text">
+		<b>Índice de uso: </b>
+		{{ Property.Giro }}
+	</div>
+	<div class="md-grid-text">
+		<b>Altura máxima: </b>
+		{{ Property.Pisos }} metros
+	</div>
+	<div class="md-grid-text">
+		<b>Deudas administrativas: </b>
+		{{ Property.Deudas }}
+	</div>
+	<div class="md-grid-text">
+		<b>Parámetros urbanísticos: </b>
+		Resol 12445-15
+	</div>
+	<br/>
+	<br/>
+</md-bottom-sheet>
+
+
+<!--<md-list> 
+    <div class="md-grid-text" ng-repeat="item in items">
+      <md-button class="md-grid-item-content" ng-click="listItemClick($index)">
+        <md-icon md-svg-src="{{item.icon}}"></md-icon>
+        <div class="md-grid-text"> {{ item.name }} </div    </div>
+  </md-list>-->

@@ -1,0 +1,54 @@
+<!--section-->
+<section layout="row" layout-wrap
+		 layout-align="center center"	
+	>
+	<!--content-->
+	<div class="md-whiteframe-z3"
+		 layout="row"
+		 layout-align="space-around"
+		 flex="50"
+		>
+		<!--message-->
+  		<div 
+  			layout-align="center center"
+			layout="column"
+			
+  		>
+  			<br/>
+  			<span>{{contactUs.message.title}}</span>
+  			<!--Texboxs-->
+				<div									
+					ng-repeat="txt in contactUs.message.txtBox"					
+				>					
+						    <md-input-container >
+							      <label>{{txt}}</label>
+							      <input ng-model="">
+						   	</md-input-container>
+			  	</div>
+			<!--CMB-->
+				  	<md-select placeholder="Costumer Service" ng-model="contactUs.message.cmbBox[0]">
+	        				<md-option ng-repeat="opt in contactUs.message.cmbBox" value="{{opt}}">{{opt}}</md-option>
+	      			</md-select>
+	        <!--TextArea-->
+        		<span>{{contactUs.message.txtArea}}</span>
+	        		<textarea>
+	        		</textarea>
+  		    <!--botón-->
+      		 <md-button class="md-raised" style="width:120px;height:50px;text-align:center">{{contactUs.message.btn}}</md-button>
+
+		</div>
+
+		<!--References-->
+			<div layout-align="center center"
+				 style="border-left:1px solid black; height:300px">
+				<br/>
+				<span>{{contactUs.references.title}}</span>
+				<div ng-repeat="text in contactUs.references.text" >
+						<span>{{text}}</span>
+				</div>
+			</div>
+		
+		</div>
+
+</section>
+      

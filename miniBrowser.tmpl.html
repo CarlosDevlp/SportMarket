@@ -1,0 +1,29 @@
+<form  style="background:white" ng-controller="Browser as b">
+                  <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <div  class="Title">Buscar Predio</div>
+                    </div>
+                  </md-toolbar> 
+                   <md-dialog-content style="overflow-x:hidden;">    
+
+                        <!--Tipo de vía-->  
+                        <md-select ng-model="combo.selected" placeholder="{{combo.selected}}" class="comboBox whole">
+                              <md-option ng-repeat="cmb in combo.options" value="{{cmb}}">{{cmb}}</md-option>             
+                         </md-select>
+
+                        <!--Nombre de vía-->
+                          <md-input-container md-no-float class="textBox whole">
+                              <input required name="nombre" ng-model="nombre" placeholder="Nombre de vía" class="whole">                              
+                          </md-input-container>
+                          <br/>                           
+                          
+                   </md-dialog-content>
+
+          <!--Botón de Buscar-->
+          <div class="md-actions" layout="row">   
+            <span flex></span>
+            <md-button ng-click="search(false,$parent.search);" class="md-primary">
+             Buscar
+            </md-button>    
+          </div>
+</form> 
