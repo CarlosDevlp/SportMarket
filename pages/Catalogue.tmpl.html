@@ -22,9 +22,9 @@
                 heading="{{catg.label}}"    
               >
 
-              	<ul ng-repeat="subcatg in catg.subcategories">
-	                     <li><a href='#'><span>{{subcatg}}</span></a></li>
-                </ul>                
+              	<div ng-repeat="subcatg in catg.subcategories" style="color:blue;cursor:pointer">
+	                     <div ng-click="Catalogue.addTag(subcatg)"><span>{{subcatg}}</span></div>
+                </div>                
                
               </accordion-group>
         	</accordion>
@@ -40,18 +40,20 @@
 				        delete-hint="Press delete to remove tag"
 				        secondary-placeholder="+Tag">
 				</md-chips>
-				<!--polos-->
+				<!--caja de polos-->
 				<div 
 					layout-align="space-between start"
 					layout-wrap
 		 			layout-margin 
 		 			layout="row">
 		 			<!--polos-->
-		 			<div>
-						<div class="md-whiteframe-z3 polo" ng-click="Catalogue.hidden=true">
+		 			<div ng-repeat="p  in Catalogue.polos">
+						<div class="md-whiteframe-z3 polo" ng-click="Catalogue.mostrar(p.club)">
+							<img src="{{p.image}}" style="height:100%;width:100%"/>
+
 						</div>
 					</div>
-					<!--botones-->
+					<!--botones
 		 			<div class="up-down"
 		 			     layout-margin 
 		 				>
@@ -59,7 +61,7 @@
 			 			<md-button class="md-fab md-mini">a</md-button>
 			 			<md-button class="md-fab md-mini">b</md-button>
 
-		 			</div>
+		 			</div>-->
 				</div>
 		</div>	
 		
@@ -80,10 +82,14 @@
 					layout="row"
 					style="height:80px;font-size:1.4em"
 				>
-					<span ng-click="Catalogue.hidden=false">Model name</span>
+					<span ng-click="Catalogue.hidden=false">Nike dri-fit </span>
 				</div>
 				<!--fotos del producto-->			
-				<div class="md-whiteframe-z3" flex="50" style="height:300px"></div>
+				<div class="md-whiteframe-z3" flex="50" style="height:300px">
+					<img ng-src="{{Polos[4].image}}" style="heigh:100%;width:100%"/>
+				</div>
+
+
 				<!--caracteristicas del producto-->
 				<div class="md-whiteframe-z3" flex="30" 
 					layout-align="center center"
@@ -124,7 +130,17 @@
 					<span>Description</span>
 				</div>
 				<!--Banner-->
-				<div class="md-whiteframe-z3" flex="80" style="height:200px"></div>
+				<div class="md-whiteframe-z3" flex="80" style="height:300px">
+						<carousel interval="1000">
+			                   <slide ng-repeat="slide in Details.slides" active="slide.active"
+			                   	style="height:100%;width:100%"
+			                   >
+		                       <img class="image-circle" ng-src="{{slide.image}}"    style="margin:auto;height:100%;width:50%"/>
+		                      
+                   		</slide>
+             </carousel>
+
+				</div>
 											
 	</div>
 	<div layout="row"

@@ -277,6 +277,7 @@ md-toolbar.md-default-theme, .header{
   cursor: pointer;
   height:200px;
   width:200px;
+  padding-bottom: 10px;
 }
 .chat{
 display: none;
