@@ -9,12 +9,26 @@
 	>
 
 		<!--banner-->
-		<div class="md-whiteframe-z3" flex="80" style="height:200px">			
+		<div class="md-whiteframe-z3" flex="80" style="height:200px">
+
+
 		</div>
 		
 		<!--categories-->
 		<div class="md-whiteframe-z3" flex="20" style="	height:800px" >
-			 
+			 <accordion close-others="true">
+              <accordion-group
+                ng-repeat="catg in Catalogue.categories"
+                heading="{{catg.label}}"    
+              >
+
+              	<ul ng-repeat="subcatg in catg.subcategories">
+	                     <li><a href='#'><span>{{subcatg}}</span></a></li>
+                </ul>                
+               
+              </accordion-group>
+        	</accordion>
+			
 		</div>
 		<!--tags and content-->
 		<div class="md-whiteframe-z3" flex="60" style="height:800px" >
@@ -51,6 +65,8 @@
 		
 
 	</div>
+
+
 	<!--detalles del producto-->
 	<div
 		layout="row"

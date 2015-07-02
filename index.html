@@ -7,12 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+   
     <!--css-->
     <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
     <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css"/>
-    <link rel="stylesheet" href="assets/app.css"/>
-   
 
+    <link rel="stylesheet" href="assets/app.css"/>   
+
+    <script src="./bower_components/angular/angular.js"></script>    
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.3.0.js"></script>
+
+    <link  href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet"/>
+     
   </head>
 
   <body  layout="row" ng-controller="MiraPlace as mp" id="mp">
@@ -26,39 +32,39 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-
+       
   <!--SECTION-->
-  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2 main">
-
+  <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2 main">        
           <!--Header-->
           <header>
             <center>
                 <md-subheader class="md-primary">
-                    <h1 class="title" style="height:100px">{{title}}</h1>
+                    <h1 class="title" >{{title}}</h1>
                 </md-subheader>
             </center>
-          </header>
           <!--menu nav-->
-                
+          <md-content class="md-padding">      
            <md-tabs  
-                 md-dynamic-height
-                 md-border-bottom 
-                 layout-align="center center"
-                 style="overflow-y:scroll"
+                  md-dynamic-height 
+                  md-border-bottom                
+                  layout-align="center center"
+                  
             >
-                    
-                  <md-tab  ng-repeat="m in menu" 
-                  label="{{m.label}}" >
+                 
+                  <md-tab 
+                      ng-repeat="m in menu" 
+                      label="{{m.label}}" 
+                  >
                         <md-content class="md-padding"  >
                             
                             <div ng-include="m.link" ></div>
                             <div ng-include="'pages/Footer.tmpl.html'" ></div>
-                        </md-content>
-                  </md-tab>
 
+                        </md-content>
+                  </md-tab>                
                     
           </md-tabs>
-
+      </md-content>
           <!--ventana de chat-->
            <div 
                 layout="column"
@@ -66,7 +72,10 @@
                 class="md-whiteframe-z3 chat"
                 >
                 <div> 
-                    <div class="title" style="z-index:20">Chat</div>
+                    <div class="title"
+                         layout="row"
+                         layout-align="center center"
+                    >Chat</div>
                     <!--caja de mensajes enviados-->                    
                         <textarea class="messages">
                             {{chat.messages}}
@@ -93,7 +102,7 @@
   <!--SCRIPT-->
     
     <script src="./src/users/model/Model.js"></script>
-    <script src="./bower_components/angular/angular.js"></script>
+    
     <script src="./bower_components/angular-animate/angular-animate.js"></script>
     <script src="./bower_components/angular-aria/angular-aria.js"></script>
     <script type="text/javascript" src="./bower_components/angular-material/angular-material.js"></script>
@@ -102,6 +111,7 @@
     <script src="./src/users/UserController.js"></script>
     <script src="./src/users/UserService.js"></script>
     <script src="./src/users/model/Model.js"></script>
+
     <script type="text/javascript">        
           angular
               .module('SportMarket', ['ngMaterial', 'users'])
@@ -115,8 +125,9 @@
               });
 
     </script>
- 
-
+  
+    
+     
 
 
   </body>
