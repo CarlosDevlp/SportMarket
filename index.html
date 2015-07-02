@@ -51,9 +51,11 @@
                   label="{{m.label}}" >
                         <md-content class="md-padding"  >
                             
-                            <div ng-include="m.link" ></div>              
+                            <div ng-include="m.link" ></div>
+                            <div ng-include="'pages/Footer.tmpl.html'" ></div>
                         </md-content>
-                      </md-tab>
+                  </md-tab>
+
                     
           </md-tabs>
 
@@ -85,19 +87,7 @@
 
            </div>
                           
-          <!--footer
-          <footer class="md-whiteframe-z3"
-                  layout="row"
-                  layout-align="space-around center ">
-
-                <div>
-                  tarjetas
-                </div>
-                footer menu nav
-                <div  ng-repeat="m in menu">
-                  <span>{{m.label}}</span>
-                </div>
-          </footer>-->
+          
   </div>            
 
   <!--SCRIPT-->
