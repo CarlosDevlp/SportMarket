@@ -5,6 +5,7 @@
 		 layout-align="center center"
 		 layout-wrap
 		 layout-margin 
+		 ng-hide="Catalogue.hidden"
 	>
 
 		<!--banner-->
@@ -32,7 +33,7 @@
 		 			layout="row">
 		 			<!--polos-->
 		 			<div>
-						<div class="md-whiteframe-z3 polo" ng-click="">			 
+						<div class="md-whiteframe-z3 polo" ng-click="Catalogue.hidden=true">
 						</div>
 					</div>
 					<!--botones-->
@@ -46,7 +47,69 @@
 		 			</div>
 				</div>
 		</div>	
+		
+
 	</div>
-	<!---->
+	<!--detalles del producto-->
+	<div
+		layout="row"
+		 layout-align="center center"
+		 layout-wrap
+		 layout-margin 
+		 ng-hide="!Catalogue.hidden">
+				<!--nombre del producto-->
+				<div class="md-whiteframe-z3" flex="80" 
+					layout-align="center center"
+					layout="row"
+					style="height:80px;font-size:1.4em"
+				>
+					<span>Model name</span>
+				</div>
+				<!--fotos del producto-->			
+				<div class="md-whiteframe-z3" flex="50" style="height:300px"></div>
+				<!--caracteristicas del producto-->
+				<div class="md-whiteframe-z3" flex="30" 
+					layout-align="center center"
+					layout="column"
+					style="height:300px"
+				>
+					<br/>
+					<!--tamaño-->
+					<span>{{Details.size.label}}:</span>	
+					<div
+						layout="row"
+						style="width:80%"
+					>
+						<md-slider flex ng-model="Details.size.ind" min="0" max="3" aria-label="blue" id="blue-slider" class="md-primary">
+  						</md-slider>						
+	      				<span>{{Details.size.value[Details.size.ind]}}</span>
+      				</div>
+      				<!--color-->
+      				<span>{{Details.color.label}}:</span>	
+      				<div 
+      					layout="row"
+						style="width:80%"
+      				>
+      						<md-slider flex ng-model="Details.color.ind" min="0" max="2" aria-label="blue" id="blue-slider" class="md-primary">
+      						</md-slider>
+		      				
+
+	      					<div style="width:20px;height:20px;border:1px solid black;background:{{Details.color.value[Details.color.ind]}}">
+	      					</div>
+  					</div>
+				</div>
+				<!--descripción del producto-->
+				<div class="md-whiteframe-z3" flex="80" 
+					layout-align="center center"
+					layout="row"
+					style="height:80px;font-size:1.4em"
+				>
+					<span>Description</span>
+				</div>
+				<!--Banner-->
+				<div class="md-whiteframe-z3" flex="80" style="height:200px"></div>
+				<!--Reviews-->
+				<div class="md-whiteframe-z3" flex="80" style="height:400px"></div>
+	</div>
 
 </section>

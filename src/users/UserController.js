@@ -11,7 +11,7 @@
   function main($scope,$mdSidenav,$mdDialog){
     
       //preloader
-        $scope.$watch('$viewContentLoaded', function(){    
+        $scope.$watch('$viewContentLoaded', function(){
         });
 
         $scope.title="Sport Market";
@@ -33,11 +33,6 @@
                                   text:["Address","Telephone","Email"]
                            }
                         };
-
-                $scope.Catalogue={
-                      tags:[]
-                };     
-
         $scope.chat={
                       messages:"",
                       message:"",
@@ -45,7 +40,19 @@
                           this.messages+="\n"+this.message;
 
                       }
-                    };
+                    };                        
+
+        $scope.Catalogue={
+              tags:[],
+              hidden:false
+
+        };     
+        $scope.Details={ 
+              size:{label:"Size",value:["S","M","L","XL"],ind:0}
+             ,color:{label:"Color",value:["#6FAE9B","#756FAE","#DBE279"],ind:0}
+            };
+        
+        
 
       
   }     
