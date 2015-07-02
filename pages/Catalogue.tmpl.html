@@ -9,10 +9,11 @@
 	>
 
 		<!--banner-->
-		<div class="md-whiteframe-z3" flex="80" style="height:200px"></div>
+		<div class="md-whiteframe-z3" flex="80" style="height:200px">			
+		</div>
 		
 		<!--categories-->
-		<div class="md-whiteframe-z3" flex="20" style="height:800px" >
+		<div class="md-whiteframe-z3" flex="20" style="	height:800px" >
 			 
 		</div>
 		<!--tags and content-->
@@ -63,7 +64,7 @@
 					layout="row"
 					style="height:80px;font-size:1.4em"
 				>
-					<span>Model name</span>
+					<span ng-click="Catalogue.hidden=false">Model name</span>
 				</div>
 				<!--fotos del producto-->			
 				<div class="md-whiteframe-z3" flex="50" style="height:300px"></div>
@@ -108,8 +109,26 @@
 				</div>
 				<!--Banner-->
 				<div class="md-whiteframe-z3" flex="80" style="height:200px"></div>
-				<!--Reviews-->
-				<div class="md-whiteframe-z3" flex="80" style="height:400px"></div>
+											
 	</div>
+	<div layout="row"
+		 layout-align="center center"
+		 layout-wrap
+		 layout-margin 
+		 
+	>
 
+
+				<!--Reviews-->	
+				<div class="md-whiteframe-z3" flex="80" style="height:400px"
+					layout="column"
+					layout-align="center center"
+					ng-hide="!Catalogue.hidden"			
+				>
+		
+						<!--comentarios-->					
+						<div class="fb-comments" data-href="https://www.facebook.com/sportmarket10" data-numposts="5"></div>		
+
+				</div>
+	</div>
 </section>

@@ -12,8 +12,9 @@
     
       //preloader
         $scope.$watch('$viewContentLoaded', function(){
+              
         });
-
+        getAngular($scope);
         $scope.title="Sport Market";
 
         $scope.menu=[{label:"Home",link:"pages/Home.tmpl.html"},
@@ -44,7 +45,7 @@
 
         $scope.Catalogue={
               tags:[],
-              hidden:false
+              hidden:true
 
         };     
         $scope.Details={ 
@@ -60,4 +61,4 @@
 
   
 })();
-  
+
